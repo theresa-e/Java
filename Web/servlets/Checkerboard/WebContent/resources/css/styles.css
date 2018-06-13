@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+* {
+    margin: auto;
+    padding: 0px;
+}
+
+h1 {
+	text-align: center;
+}
+.row {
+ /*    width: 500px; */
+    height: 50px;
+    font-size: 0;
+}
+.odd-square {
+    width: 50px;
+    height: 50px;
+    background-color: #8bc6bf;
+    display: inline-block;
+    margin: none;
+}
+.even-square {
+    width: 50px;
+    height: 50px;
+    background-color:#476467;
+    display: inline-block;
+}
