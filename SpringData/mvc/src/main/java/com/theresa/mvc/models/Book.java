@@ -13,11 +13,11 @@ import javax.persistence.Table;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.Size;
 
-@Entity
+@Entity // Tells Spring this is related to a database.
 @Table(name="books")
 public class Book {
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY) // Id will be auto-generated
 	private Long id;
 	@Size(min = 5, max=200)
 	private String title;
@@ -27,7 +27,7 @@ public class Book {
 	private String language; 
 	@Min(100)
 	private Integer numberOfPages;
-	@Column(updatable=false)
+	@Column(updatable=false) // Created at will not be updated after creation.
 	private Date createdAt;
 	private Date updatedAt;
 	
