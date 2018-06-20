@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+body {
+	background-color: #f2e1ee;
+}
+
+.header {
+	display: flex;
+	flex-direction: column;
+	padding-top: 20px;
+}
+
+a {
+	color: #6b5d67;
+}
+
+a:hover {
+	color: #a08b9b;
+}
