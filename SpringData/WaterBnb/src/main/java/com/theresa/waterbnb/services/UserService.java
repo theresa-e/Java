@@ -1,12 +1,12 @@
-package com.theresa.authentication.services;
+package com.theresa.waterbnb.services;
 
 import java.util.Optional;
 
 import org.mindrot.jbcrypt.BCrypt;
 import org.springframework.stereotype.Service;
 
-import com.theresa.authentication.models.User;
-import com.theresa.authentication.repositories.UserRepository;
+import com.theresa.waterbnb.models.User;
+import com.theresa.waterbnb.repositories.UserRepository;
 
 @Service
 public class UserService {
@@ -55,5 +55,14 @@ public class UserService {
             }
         }
     }
-
+    
+    // find user by id
+    public User findUser(Long id) {
+    	Optional<User> optionalUser = userRepository.findById(id);
+    	if (optionalUser.isPresent()) {
+    		return optionalUser.get();
+    	} else {
+    		return null;
+    	}
+    }
 }

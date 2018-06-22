@@ -33,7 +33,8 @@ public class Users {
     }
     @RequestMapping("/login")
     public String login() {
-        return "loginPage.jsp";
+    	System.out.println("User has been logged out.");
+        return "/";
     }
     
     @RequestMapping(value="/registration", method=RequestMethod.POST)
@@ -56,6 +57,7 @@ public class Users {
     	if (userService.authenticateUser(email, password)) {
     		User user = userService.findByEmail(email);
     		session.setAttribute("userId", user.getId());
+    		if
     		return "redirect:/home";
     	} else {
     		// else, add error messages and return the login page

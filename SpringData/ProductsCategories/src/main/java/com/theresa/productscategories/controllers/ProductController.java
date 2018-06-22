@@ -44,7 +44,8 @@ public class ProductController {
 			return "redirect:/products/" + createdProduct.getId();
 		}
 	}
-	
+
+	// Show product information.	
 	@GetMapping("/products/{id}")
 	public String showProduct(@PathVariable("id") Long id, Model model, @ModelAttribute("product") Product product) {
 		Product productInfo = productService.findProduct(id); // get product by ID
